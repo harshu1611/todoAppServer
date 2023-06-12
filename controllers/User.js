@@ -52,7 +52,7 @@ export const register = async (req, res) => {
                 url:myCloud.secure_url,
             },
             otp,
-            otp_expiry: new Date(Date.now() + process.env.OTP_EXPIRE * 60 * 1000)
+            otp_expiry: new Date(Date.now() + process.env.OTP_EXPIRE *60 * 60 * 1000)
         });
 
         await sendMail(email, "Verify Your Account", `Your OTP is ${otp}`);
