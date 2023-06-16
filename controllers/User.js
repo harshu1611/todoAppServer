@@ -57,7 +57,7 @@ export const register = async (req, res) => {
 
         await sendMail(email, "Verify Your Account", `Your OTP is ${otp}`);
 
-        sendToken(res, user, 201, "Otp sent to your Email, please verify your account");
+        sendToken(res, user, 201, "Otp sent to your Email. Check Spam Folder if Email Not Received.");
 
 
     } 
